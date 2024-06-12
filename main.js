@@ -174,4 +174,5 @@ window.addEventListener('keypress',e=>{
 searchBtn.addEventListener('click',(e)=>{
     search()
 })
-// 
+// shortcuts
+window.onload=()=>{searchBox.focus()}
