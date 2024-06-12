@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Google</title>
+</head>
+<body class="bg-slate-900   flex flex-col justify-center items-center bg-no-repeat">
+
+    <main class="  p-10 flex flex-col w-full items-center justify-center gap-5   ">
+        <!-- Time and Date -->
+
+        <section class="w-[700px] py-5  flex items-center justify-center rounded flex-col gap-5 " id="dateSect">
+            
+                 <span class="text-6xl  text-gray-300 " id="clock"></span>
+                <!--<span class="text-gray-400 text-3xl font-bold tracking-wider ">12/12/2024</span> -->
+            
+        </section>
+
+        <!-- Search -->
+         <section class="max-w-[1000px] relative flex items-center justify-center">
+            <input type="search" class="text-xl  px-6 py-5  rounded-xl min-w-[300px] focus:outline-none tracking-wide font-semibold  md:w-[700px]  " placeholder="Search Here..." id="searchbox">
+            <button class="text-slate-700 text-4xl absolute right-5 bg-white px-3 " id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+           
+         </section>
+        <!-- Fequently used -->
+         <section>
+            <div class="w-full  bg-white/50  rounded-lg  p-10 max-w-[800px]  flex flex-col items-center justify-center   shadow-lg shadow-black   ">
+                <h1 class="text-3xl  font-semibold text-slate-700      mb-10 ">Applications </h1>
+                <ul class="grid grid-cols-3 mt-5 items-center justify-center w-full gap-10  " id="lists"></ul>
+                <hr class="h-[2px]  bg-black mt-5 rounded-full "/>
+            </div>
+         </section>
+        
+
+    </main>
+    <footer class=" text-gray-200 w-full text-center py-3  ">
+        Created by <strong>Roniwilliams</strong>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>
