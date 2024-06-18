@@ -33,15 +33,26 @@
          <section class="max-w-[1000px] relative flex items-center justify-center">
             <input type="search" class="text-xl  px-6 py-5  rounded-xl min-w-[300px] focus:outline-none tracking-wide font-semibold  md:w-[700px]  " placeholder="Search Here..." id="searchbox">
             <button class="text-slate-700 text-4xl absolute right-5 bg-white px-3 " id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-           
+            </button>       
          </section>
         <!-- Fequently used -->
          <section>
-            <div class="w-full  bg-white/50  rounded-lg  p-10 max-w-[800px]  flex flex-col items-center justify-center   shadow-lg shadow-black   ">
+            <div class="w-full  bg-white/50  rounded-lg  p-10 max-w-[800px]  flex flex-col items-center justify-center   shadow-lg shadow-black  relative  ">
                 <h1 class="text-3xl  font-semibold text-slate-700      mb-10 ">Applications </h1>
                 <ul class="grid grid-cols-3 mt-5 items-center justify-center w-full gap-10  " id="lists"></ul>
+                <button class="mt-8  text-2xl  top-4  right-4  text-white bg-slate-900 p-5 rounded-xl hover:scale-[1.1] transition-all duration-300 ease-in-out " id="addLinks"><i class="fa-solid fa-plus text-5xl "></i></button>
                 <hr class="h-[2px]  bg-black mt-5 rounded-full "/>
+
+                <div class="absolute top-0 left-0 w-full h-full  flex items-center justify-center flex-col gap-10 bg-slate-900  hidden " id="new">
+                    <h1 class="text-6xl text-white uppercase ">Add new page</h1>
+                    <button id="closeNewpage"><i class="fa-solid fa-xmark text-6xl text-red-600 shadow-red-500 h-[70px] flex  items-center justify-center w-[70px]  absolute top-10 right-10 rounded-full  "></i></button>
+                    <input type="text" class="text-3xl px-5 py-3 rounded-lg focus:outline-none ring-slate-600 ring-4 text-slate-700 " placeholder="Add URL" id="url">
+                    <input type="text" placeholder="Add Name"  class="text-3xl px-5 py-3 rounded-lg focus:outline-none ring-slate-600 ring-4 text-slate-700 "
+                    id="name" >
+                    <button class="bg-slate-900 text-white px-10 py-3 rounded-lg hover:scale-[1.1]  text-3xl ring-4 ring-white  "
+                    onclick="addNewPage()"
+                    >Add</button>
+                </div>
             </div>
          </section>
         

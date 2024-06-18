@@ -61,33 +61,8 @@ const objApps=[
         label:"FontAwesome",
         link:"https://www.fontawesome.com"
     },
-    
-    
-
-
-
 ]
-// const bOptions=[
-//     {
-//         icon:`<i class="fa-solid fa-clock-rotate-left text-4xl text-white  "></i>`,
-//         label:"History",
-//         link:'chrome://history/'
-//     },
-//     {
-//         icon:`<i class="fa-solid fa-download text-4xl text-white   "></i>`,
-//         label:"Downloads"
-//     },
-// ]
 
-// bOptions.map(obj=>{
-//     return (options.innerHTML+=`   <a class="bg-slate-900 text-white  w-fit p-5 rounded-lg shadow-xl shadow-black/20 hover:scale-[1.1] transition-all duration-300 ease-in-out 
-//                 cursor-pointer flex  items-center gap-3 "
-//                 href=${obj.link}
-//                 >
-//                     ${obj.icon}
-//                     <span>${obj.label}</span>
-//                 </a>`)
-// })
 objApps.map((object)=>{
     
     return(
@@ -176,3 +151,35 @@ searchBtn.addEventListener('click',(e)=>{
 })
 // shortcuts
 window.onload=()=>{searchBox.focus()}
+
+// Adding links
+const addLink=document.getElementById("addLinks")
+const closeNew=document.getElementById("closeNewpage")
+const newBlock=document.getElementById("new")
+const url=document.getElementById('url')
+const pname=document.getElementById('name')
+addLink.addEventListener('click',()=>{
+    newBlock.classList.remove('hidden');
+})
+closeNew.addEventListener('click',()=>{
+    newBlock.classList.add('hidden');
+})
+
+let pageName,pageurl
+pname.addEventListener('change',(e)=>{
+    pageName=e.target.value;
+    
+})
+url.addEventListener('change',(e)=>{
+    pageurl=e.target.value;
+    
+})
+
+
+const addNewPage=()=>{
+    objApps.push({
+        label:pageName,
+        link:pageurl
+    })
+    console.log(objApps);
+}
